@@ -3,9 +3,9 @@ while (true)
 {
     try
     {
-        Console.Write("Введите количество одногруппников: ");
+        Console.Write("Введите первое число: ");
         int a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Введите количество страниц каждому: ");
+        Console.Write("Введите второе число: ");
         int b = Convert.ToInt32(Console.ReadLine());
 
         if (a < 0 || b < 0)
@@ -21,5 +21,5 @@ while (true)
     {
         Console.WriteLine("Неправильный тип данных");
     }
-   
+   // сас
 }
