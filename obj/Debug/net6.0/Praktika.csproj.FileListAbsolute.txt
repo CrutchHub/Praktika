@@ -1,0 +1,15 @@
+D:\Games\ProjectsVS\1\Praktika\bin\Debug\net6.0\Praktika.exe
+D:\Games\ProjectsVS\1\Praktika\bin\Debug\net6.0\Praktika.deps.json
+D:\Games\ProjectsVS\1\Praktika\bin\Debug\net6.0\Praktika.runtimeconfig.json
+D:\Games\ProjectsVS\1\Praktika\bin\Debug\net6.0\Praktika.dll
+D:\Games\ProjectsVS\1\Praktika\bin\Debug\net6.0\Praktika.pdb
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.csproj.AssemblyReference.cache
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.GeneratedMSBuildEditorConfig.editorconfig
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.AssemblyInfoInputs.cache
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.AssemblyInfo.cs
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.csproj.CoreCompileInputs.cache
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.dll
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\refint\Praktika.dll
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.pdb
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\Praktika.genruntimeconfig.cache
+D:\Games\ProjectsVS\1\Praktika\obj\Debug\net6.0\ref\Praktika.dll
