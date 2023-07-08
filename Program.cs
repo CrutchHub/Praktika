@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-VendingMachine vendingMachine = new();
+﻿VendingMachine vendingMachine = new();
 vendingMachine.AddGood("Сок злой", 3, 50);
 vendingMachine.AddGood("Сок добрый", 2, 55);
 vendingMachine.AddGood("Злой кола", 4, 105);
