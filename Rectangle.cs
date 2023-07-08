@@ -18,7 +18,7 @@
         if (paymentType == 1)
         {
             Console.Write("Введите сумму:");
-            while (!int.TryParse(Console.ReadLine(), out paymentSum) && paymentSum < 1) Console.Write("Неправильная сумма, введите снова:");
+            while (!int.TryParse(Console.ReadLine(), out paymentSum) || paymentSum < 1) Console.Write("Неправильная сумма, введите снова:");
             MoneyOnBalance += paymentSum;
             Console.WriteLine("Успешное пополнение");
         }
