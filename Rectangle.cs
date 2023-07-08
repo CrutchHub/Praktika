@@ -76,7 +76,7 @@
     public void ShowGoods()
     {
         Console.WriteLine("------Список товаров------");
-        for (int i = 0; i < Goods.Count; i++) 
+        for (int i = 0; i < Goods.Count; i++)
         {
             Console.WriteLine($"Номер товара:{i + 1}\nНазвание товара:{Goods[i]["Название"]}\n" +
                 $"Количество товара:{Goods[i]["Количество"]}\nЦена товара:{Goods[i]["Цена"]}\n");
@@ -84,7 +84,7 @@
         Console.WriteLine("------------");
     }
 
-    public bool BuyGood (int id, int count)
+    public bool BuyGood(int id, int count)
     {
         if (count <= 0) { Console.WriteLine("Неправильное количество товара"); return false; }
         try
@@ -102,8 +102,8 @@
                 MoneyOnBalance -= (double)Goods[id]["Цена"] * count;
                 Console.WriteLine($"Успешная покупка. Остаток на балансе:{MoneyOnBalance}");
                 Console.WriteLine("------------");
-                return true;            
-            }           
+                return true;
+            }
         }
         catch (IndexOutOfRangeException)
         {
