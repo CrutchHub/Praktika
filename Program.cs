@@ -26,11 +26,6 @@ while (true)
         string[] buyCommand = command.Split(' ');
         try
         {
-            //Console.Write("Введите номер товара:");
-            //while (!int.TryParse(Console.ReadLine(), out id) || id < 0) Console.Write("Неправильный ввод, повторите:");
-            //Console.Write("Введите кол-во:");
-            //while (!int.TryParse(Console.ReadLine(), out count) || count < 1) Console.Write("Неправильный ввод, повторите:");
-            //id -= 1;
             int id = int.Parse(buyCommand[1]) - 1;
             int count = int.Parse(buyCommand[2]);
             vendingMachine.BuyGood(id, count);
