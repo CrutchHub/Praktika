@@ -145,6 +145,26 @@
         }
         return true;
     }
+
+    /// <summary>
+    /// Изменение количества товара
+    /// </summary>
+    /// <param name="id">ID товара</param>
+    /// <param name="count">Кол-во</param>
+    /// <returns>True если успешно, false если нет.</returns>
+    public bool ChangeCount(int id, int count)
+    {
+        try
+        {
+            Goods[id]["Количество"] = count;
+            return true;
+        }
+        catch
+        {
+            Console.WriteLine("Неудачное изменение количества товара");
+            return false;
+        }
+    }
 }
 
 
