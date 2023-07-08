@@ -1,24 +1,61 @@
-﻿Auto testAuto = new("ШиповОчка", "Эконом", "ЛАДА", 400, 5000, "Гроб на колесах");
-testAuto.ShowInfo();
-Console.WriteLine("-------------------------------------");
-PassengerCar testPassengerCar = new(4, 100, "ШиповОчка", "Бюджетный", "Узбек с рынка", 300, 4000, "Вай какая машина");
-testPassengerCar.ShowInfo();
-Console.WriteLine("-------------------------------------");
-Lorry testLorry = new(500, "ШиповОчка", "Не ты боишься аварии а она тебя", "Зуб даю", 3000, 4500, "3 всадник апокалипсиса");
-testLorry.ShowInfo();
-Console.WriteLine("-------------------------------------");
-Train testTrain = new("Пассажирский", 10, "ООО \"Вагонеточка\"", 500, 30000, "Экспресс \"Дорогу покажешь - доедем\"");
-testTrain.ShowInfo();
-Console.WriteLine("-------------------------------------");
-Plane testPlane = new(3000, 300, "Взлетело? - Уже неплохо.", 500, 10000, "\"Билет в один конец\"");
-testPlane.ShowInfo();
-Console.WriteLine("-------------------------------------");
-PassengerPlane testPassengerPlane = new(50, "Эконом", 5000, 200, "BOYing", 1000, 50000, "Get your рейс back here");
-testPassengerPlane.ShowInfo();
-Console.WriteLine("-------------------------------------");
-CargoPlane testCargoPlane = new(500, 250, 3000, 500, "\"Доставка бомб до вашего дома\"", 1000, 100000, "Еb@n3t? - Не должно");
-testCargoPlane.ShowInfo();
+﻿using System.Diagnostics.Metrics;
 
-
+VendingMachine vendingMachine = new();
+vendingMachine.AddGood("Сок злой", 3, 50);
+vendingMachine.AddGood("Сок добрый", 2, 55);
+vendingMachine.AddGood("Злой кола", 4, 105);
+vendingMachine.AddGood("Добрый кола", 5, 100);
+vendingMachine.AddGood("Адреналин раш Б", 2, 85);
+vendingMachine.AddGood("Энергетик гореть нанкин резня великий дракон", 5, 100);
+vendingMachine.AddGood("Левая палочка твикс", 3, 40);
+vendingMachine.AddGood("Правая палочка твикс", 4, 1000);
+vendingMachine.AddGood("Батончик Илон Марс", 2, 75);
+vendingMachine.AddGood("Слабительное Доктор Дизель", 2, 55);
+while (true)
+{
+    Console.WriteLine("------Банкомат десептикон v23.07.07b приветствует вас------");
+    Console.WriteLine("Вы можете ввести следующие команды:\n" +
+        "AddMoney - для зачисления денег на баланс\n" +
+        "GetChange - для выдачи сдачи\n" +
+        "ShowGoods - для просмотра списка товаров\n" +
+        "BuyGood {Номер товара} {Количество} - для покупки товара (скобки не вводить)");
+    Console.Write("Введите команду:");
+    string command = Console.ReadLine().ToLower();
+    if (command.Contains("buygood"))
+    {
+        string[] buyCommand = command.Split(' ');
+        try
+        {
+            //Console.Write("Введите номер товара:");
+            //while (!int.TryParse(Console.ReadLine(), out id) || id < 0) Console.Write("Неправильный ввод, повторите:");
+            //Console.Write("Введите кол-во:");
+            //while (!int.TryParse(Console.ReadLine(), out count) || count < 1) Console.Write("Неправильный ввод, повторите:");
+            //id -= 1;
+            int id = int.Parse(buyCommand[1]) - 1;
+            int count = int.Parse(buyCommand[2]);
+            vendingMachine.BuyGood(id, count);
+        }
+        catch
+        {
+            Console.WriteLine("Неправильно введена команда");
+        }
+    }
+    else
+    {
+        switch (command)
+        {
+            case "addmoney":
+                vendingMachine.AddMoney();
+                break;
+            case "getchange":
+                vendingMachine.GetChange();
+                break;
+            case "showgoods":
+                vendingMachine.ShowGoods();
+                break;
+            default: Console.WriteLine("Такой команды нет"); break;
+        }
+    }
+}
 
 
